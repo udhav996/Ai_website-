@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Prompting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: #1f2833;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #66fcf1;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .ai-course-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      background: #0b0c10;
+      padding: 10px;
+    }
+
+    .ai-course-menu a {
+      color: #ffffff;
+      background: #45a29e;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .ai-course-menu a:hover {
+      background: #66fcf1;
+      color: #0b0c10;
+    }
+
+    .lesson-content {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .lesson-content h2 {
+      text-align: center;
+      color: #1f2833;
+    }
+
+    .lesson-content h3, .lesson-content h4 {
+      color: #0b0c10;
+      margin-top: 20px;
+    }
+
+    .lesson-content b {
+      display: block;
+      margin-top: 25px;
+      font-size: 18px;
+      color: #0b0c10;
+    }
+
+    mark {
+      background-color: #ffff88;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .lesson-content {
+        padding: 15px;
+        font-size: 15px;
+      }
+
+      .ai-course-menu a {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="home">
+    <a href="aiwebsite.html" id="home">🏠 Home</a>
+  </nav>
+
+  <div class="ai-course-menu">
+    <a href="basics.html">🔰 Basics of Prompt Engineering</a>
+    <a href="advanced.html">🚀 Advanced Prompting</a>
+    <a href="practice.html">📝 Practice & Certification</a>
+  </div>
+
+  <div class="lesson-content">
+    <h2>🚀 Advanced Prompting</h2>
+
+    <p><strong>Advanced Prompting in AI: A Simple Guide for Everyone</strong></p>
+
+    <h3>What is Advanced Prompting?</h3>
+    <p>Advanced prompting means giving clear and detailed instructions to AI so you get exactly the kind of answer you want. It saves time and improves results.</p>
+
+    <p>Instead of being vague, being specific helps AI better understand your request.</p>
+
+    <hr>
+
+    <h3>🛠 Advanced Techniques in Prompting</h3>
+
+    <p><strong>1️⃣ Be Specific</strong><br>
+    ❌ "Tell me about space."<br>
+    ✅ "Explain how black holes are formed in simple words."</p>
+
+    <p><b>✍ <mark>Context and Details</mark></b><br>
+    ❌ "Tell me about AI in business."<br>
+    ✅ "How can AI help a small online shop increase its sales?"</p>
+
+    <hr>
+
+    <h4>Use Step-by-Step Instructions</h4>
+    <p>❌ "Explain how to code a website."<br>
+    ✅ "Step by step, explain how to create a simple website using HTML and CSS for a beginner."</p>
+
+    <h4>Break Down Complex Problems</h4>
+    <p>Instead of: "How do I make an AI chatbot?"<br>
+    Ask:
+    <br>1. "How can I collect data for an AI chatbot?"
+    <br>2. "Which algorithms are best for chatbot AI?"
+    <br>3. "How do I train an AI chatbot to respond accurately?"</p>
+
+    <hr>
+
+    <h3>Advanced Prompting Techniques</h3>
+    <ul>
+      <li>✔️ Role-Based Prompting: "You are a startup consultant. How can I use AI to grow my e-commerce business?"</li>
+      <li>✔️ Expect a specific format: "Explain machine learning in one short paragraph using simple words."</li>
+      <li>✔️ Use tone and complexity: "Explain blockchain like I’m 10 years old."</li>
+      <li>✔️ Guide the tone: "Use a professional tone to explain this to a manager."</li>
+    </ul>
+
+    <hr>
+
+    <h3>Controlling the Response</h3>
+    <ul>
+      <li>1️⃣ Constraints: "Summarize the history of AI in 3 sentences."</li>
+      <li>2️⃣ Format: "Explain reinforcement learning as a short story."</li>
+      <li>3️⃣ Combine requests: "Give me a summary of Tesla’s AI projects in bullet points."</li>
+      <li>4️⃣ Tone: "Explain like I’m a 10-year-old."</li>
+      <li>5️⃣ Adjust Complexity: Same question, but tailored to beginner/expert.</li>
+    </ul>
+
+    <hr>
+
+    <h3>Using Chain of Thought (Thinking in Steps)</h3>
+    <p>❌ "Solve 987 × 23."<br>
+    ✅ "Step by step, how do you multiply 987 by 23?"</p>
+
+    <hr>
+
+    <h3>Asking AI for Alternative Ideas</h3>
+    <ul>
+      <li>“Can you give me more creative marketing ideas?”</li>
+      <li>“Can you list alternative ways to write this sentence more professionally?”</li>
+      <li>“Give me five unique AI business ideas in health.”</li>
+    </ul>
+
+    <hr>
+
+    <h4>Final Thoughts on Advanced Prompting</h4>
+    <p>By using these strategies:<br>
+    ✔ Be specific<br>
+    ✔ Use role-play<br>
+    ✔ Set constraints<br>
+    ✔ Ask for step-by-step reasoning</p>
+
+    <hr>
+
+    <h3>📝 Case Study 1: AI for Content Writing</h3>
+    <p><strong>Use Case:</strong> A marketing agency used AI to generate blog posts.</p>
+    <p>✅ Prompt: "Write a 1000-word blog post about digital marketing trends in 2024. Cover AI-driven marketing, influencer marketing, and SEO updates."</p>
+    <p><strong>Results:</strong><br>
+    ✨ Writing time reduced by 70%<br>
+    ✨ Increased SEO traffic<br>
+    ✨ Editors focused on improving rather than writing from scratch</p>
+
+    <hr>
+
+    <h3>📞 Case Study 2: AI for Customer Support Chatbots</h3>
+    <p><strong>Use Case:</strong> An e-commerce company used AI to handle thousands of customer questions.</p>
+    <p>✅ Prompt: "Hi! I can help with order tracking, product details, and returns. What do you need assistance with?"</p>
+    <p><strong>Results:</strong><br>
+    ✅ 80% questions auto-resolved<br>
+    ✅ Response time cut by 50%<br>
+    ✅ Boosted user satisfaction and sales</p>
+
+    <hr>
+
+    <h3>🏥 Case Study 3: AI in Healthcare</h3>
+    <p><strong>Use Case:</strong> Doctors used AI to help diagnose patients faster.</p>
+    <p>✅ Prompt: "A patient has fever, cough, and shortness of breath. Suggest diagnoses and tests."</p>
+    <p><strong>Results:</strong><br>
+    ✅ 90% accuracy<br>
+    ✅ Early detection & improved care<br>
+    ✅ Faster decisions</p>
+
+    <hr>
+
+    <b>💡 Conclusion</b>
+    <p>These case studies show how prompt engineering is transforming industries. With detailed and structured prompts, you can unlock the full potential of AI tools.</p>
+  </div>
+</body>
+</html>

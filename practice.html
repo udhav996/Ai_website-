@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practice & Certification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: #1f2833;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #66fcf1;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .ai-course-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      background: #0b0c10;
+      padding: 10px;
+    }
+
+    .ai-course-menu a {
+      color: #ffffff;
+      background: #45a29e;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .ai-course-menu a:hover {
+      background: #66fcf1;
+      color: #0b0c10;
+    }
+
+    .ai-course-container {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2, h3 {
+      color: #1f2833;
+    }
+
+    textarea {
+      width: 90%;
+      max-width: 600px;
+      height: 100px;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 15px auto;
+      font-size: 16px;
+      font-weight: bold;
+      background: #66fcf1;
+      border: none;
+      color: #0b0c10;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a29e;
+    }
+
+    #certificateCanvas {
+      display: none;
+      margin-top: 20px;
+    }
+
+    #downloadCertificate {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #1f2833;
+    }
+
+    @media (max-width: 600px) {
+      .ai-course-menu a {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      textarea {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="home">
+    <a href="aiwebsite.html" id="home">🏠 Home</a>
+  </nav>
+
+  <div class="ai-course-menu">
+    <a href="basics.html">🔰 Basics of Prompt Engineering</a>
+    <a href="advanced.html">🚀 Advanced Prompting</a>
+    <a href="practice.html">📝 Practice & Certification</a>
+  </div>
+
+  <div class="ai-course-container">
+    <h2>📝 Practice & Certification</h2>
+    <p>Test your knowledge and get certified in Prompt Engineering!</p>
+
+    <!-- Practice Section -->
+    <div class="practice-section">
+      <h3>✏️ Practice Exercises</h3>
+
+      <p><strong>Exercise 1:</strong></p>
+      <p id="exercise1-question">🔹 Improve this vague prompt: "Write about a dog."</p>
+      <p id="exercise1-hint">Hint: Be specific, clear, and creative!</p>
+      <textarea id="exercise1" placeholder="Write your improved prompt here..."></textarea>
+
+      <p><strong>Exercise 2:</strong></p>
+      <p id="exercise2-question">🔹 Structure a prompt for AI to explain how the internet works.</p>
+      <p id="exercise2-hint">Hint: Use step-by-step or role-based prompt format.</p>
+      <textarea id="exercise2" placeholder="Write your structured prompt here..."></textarea>
+
+      <button onclick="checkExercises()">Submit Answers</button>
+      <p id="exercise-feedback"></p>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="quiz-container">
+      <h3>🎯 Quiz: Test Your Prompting Skills</h3>
+      <button onclick="startQuiz()">Start Quiz</button>
+      <p id="quiz-result"></p>
+    </div>
+
+    <!-- Certification Section -->
+    <div class="certification-section">
+      <h3>🏆 Earn Your Certificate</h3>
+      <p>Complete the quiz and exercises to get certificate!</p>
+      <button id="getCertificateButton" onclick="generateCertificate()">Get Your Certificate</button>
+      <p id="certificate-message"></p>
+
+      <canvas id="certificateCanvas" width="800" height="600"></canvas>
+      <a id="downloadCertificate" download="Prompt_Engineering_Certificate.png">Download Certificate</a>
+    </div>
+  </div>
+
+  <script src="ai-course.js"></script>
+
+</body>
+</html>

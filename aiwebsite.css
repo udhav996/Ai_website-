@@ -1,0 +1,627 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0b0c10;
+    color: #c5c6c7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1f2833;
+      padding: 10px 5px;
+      z-index: 1000;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3px;
+    padding:0;
+    margin: 0;
+    margin-left: auto;
+
+}
+
+nav ul li {
+    position: relative;
+    padding: 0px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e2e9f0;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul li:hover a {
+    color: #66fcf1; /* Neon blue text */
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: #66fcf1; /* Neon glow line */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+    left: 0;
+    box-shadow: 0 0 10px #66fcf1;
+} 
+
+
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    background-color: #1f2833; /* Adjust to your theme */
+    min-width: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    border-radius: 10px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: scaleY(1);
+    animation: bounceIn 0.5s ease-out;
+    
+}
+
+@keyframes bounce {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    40% {
+        transform: scaleY(1.2);
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.dropdown-menu {
+    animation: bounceIn 0.5s ease-out forwards;
+} 
+
+/* Submenu Items */
+.dropdown-menu li {
+    padding: 8px;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+.dropdown-menu li a:hover {
+    background: #45a29e;
+    border-radius: 5px;
+}
+
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #1f2833, #0b0c10);
+    padding: 50px;
+    color: white;
+    margin-top: 40px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.cta-btn {
+    background:transparent;
+    border: 2px solid #66fcf1;
+    color:#66fcf1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition:all 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+    background:#66fcf1;
+    color: #0b0c10;
+    box-shadow: 0 0 10px 1;
+}
+
+
+a {
+
+    text-decoration: none;
+    
+}
+
+
+
+
+/* Search Bar */
+.search-bar {
+    margin: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+
+
+
+.category-content .card-container {
+    display: flex !important; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Ensure cards have proper size and spacing */
+.category-content .card {
+    width: 220px;
+    padding: 15px;
+    background: #1f2833;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.category-content .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #66fcf1;
+}
+
+.category-content .card-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Ensure category headings do not overlap */
+.category h2 {
+  display: inline-block;
+  margin: 15px auto;
+  padding: 10px 20px;
+  background: #45a29e;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.category h2:hover {
+  background: #66fcf1;
+  color: #0b0c10;
+  transform: scale(1.03);
+}
+
+
+
+button {
+    background: #66fcf1;
+    color: #1f2833;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background: #45a29e;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #1f2833;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.modal-content .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+.robot-container {
+    position: absolute;
+    left: 180px; /* Adjust to position it near LearnAI text */
+    top: 10px;
+}
+
+.robot {
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.robot:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-5px); }
+}
+
+.blink {
+    filter: brightness(50%);
+} 
+
+
+.robot {
+    position: absolute;
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+    
+
+}
+
+.robot:hover {
+    transform: translateX(300px) translateY(-10px)rotate(-20deg)
+} 
+
+
+
+@keyframes multiEffect {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        filter: hue-rotate(0deg) drop-shadow(0 0 5px rgba(0, 123, 255, 0.5));
+    }
+    25% {
+        transform: translateY(-10px) rotate(10deg);
+        filter: hue-rotate(90deg) drop-shadow(0 0 10px rgba(255, 0, 0, 0.7));
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+        filter: hue-rotate(180deg) drop-shadow(0 0 15px rgba(0, 255, 0, 0.7));
+    }
+    75% {
+        transform: translateY(-10px) rotate(-10deg);
+        filter: hue-rotate(270deg) drop-shadow(0 0 10px rgba(255, 165, 0, 0.7));
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        filter: hue-rotate(360deg) drop-shadow(0 0 5px rgba(0, 123, 255, 0.5));
+    }
+}
+
+.log {
+    width: 60px;
+    height: 70px;
+    animation: multiEffect 5s infinite ease-in-out;
+} 
+
+.logo{
+    font-weight: bold;
+    font-size: 24px;
+    color: #66fcf1;
+}
+
+
+.carousel-container {
+    width: 60%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 470px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    height: auto;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .slide-description {
+    margin-top: 5px;
+    margin-left: 60px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    max-width: 90%;
+  }
+
+
+  .comparison-container {
+    text-align: center;
+    margin-top: 20px;
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;  
+      
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background: #45a29e;
+}
+td {
+    background: #1f2833;
+    color: white;
+}
+  
+  /* Footer */
+.footer {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: #1f2833;
+}
+
+
+
+
+/* ========== Responsive Design ========== */
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .robot-container {
+    display: none;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #1f2833;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: #66fcf1;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  .carousel-container {
+    width: 95%;
+    padding: 10px 0;
+  }
+
+  .swiper {
+    height: auto;
+  }
+
+  .swiper-slide img {
+    max-height: 280px;
+  }
+
+  .slide-description {
+    font-size: 14px;
+    margin: 5px auto;
+  }
+
+  #search {
+    width: 90%;
+  }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .category-content .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-content .card {
+    width: 90%;
+  }
+}
+
+
+
+/* Fix for submenu on mobile */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: relative;
+    transform: scaleY(1) !important;
+    opacity: 1 !important;
+    display: block;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  nav ul li .dropdown-menu li a {
+    padding-left: 30px;
+  }
+
+  .robot-container {
+    display: block;
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  nav {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+  table {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .robot-container {
+    position: absolute;
+    right: 60px;
+    top: 12px;
+    z-index: 100;
+  }
+
+  .robot {
+    width: 60px;
+    max-height: 60px;
+  }
+}
+
+/* 🔹 Mobile tap shake (reduced distance) */
+@media (max-width: 768px) {
+  @keyframes shakeMobile {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-50px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-2px); }
+  }
+
+  .shake-mobile {
+    animation: shakeMobile 0.3s ease-in-out;
+  }
+
+  .robot:hover {
+    transform: none; /* Disable hover zoom on mobile */
+  }
+}
+
+/* Horizontal scrollable card container for categories */
+.category-content .card-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Card styling in horizontal scroll */
+.category-content .card {
+  display: inline-block;
+  width: 220px;
+  margin-right: 15px;
+  white-space: normal;
+  vertical-align: top;
+}
+
+/* Faster scroll indicator (optional) */
+.category-content .card-container::-webkit-scrollbar {
+  height: 8px;
+}
+.category-content .card-container::-webkit-scrollbar-thumb {
+  background: #66fcf1;
+  border-radius: 10px;
+}
+
+

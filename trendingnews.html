@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Trending News</title>
+    <link rel="stylesheet" href="latestnews.css"> <!-- Link to CSS file -->
+
+</head>
+<body>
+
+    <nav align="center" id="home">
+        <a href="file:///C:/aiwebsite/aiwebsite.html">🏠 Home</a>
+    </nav>
+
+    <h2>📰 AI Trending News</h2>
+    <div id="news-container">Loading...</div>
+
+    <script>
+        async function fetchRSS() {
+            try {
+                let rssUrl = "https://news.google.com/rss/search?q=artificial+intelligence"; // Change URL for other sources
+                let response = await fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(rssUrl));
+                let data = await response.json();
+               
+                let newsHTML = "";
+                data.items.slice(0, 5).forEach(article => { // Show top 5 news
+                    newsHTML += `<h3><a href="${article.link}" target="_blank">${article.title}</a></h3>
+                                 <p>${article.pubDate}</p>`;
+                });
+
+                document.getElementById("news-container").innerHTML = newsHTML;
+            } catch (error) {
+                document.getElementById("news-container").innerHTML = "❌ Failed to load news.";
+            }
+        }
+
+        fetchRSS();
+
+        const sources = [
+    "https://news.google.com/rss/search?q=artificial+intelligence",
+    "https://www.theverge.com/rss/index.xml",
+    "https://www.technologyreview.com/feed/"
+];
+
+const randomSource = sources[Math.floor(Math.random() * sources.length)]; // Randomize source to get different news
+const rssUrl = "https://rss2json.com/api.json?rss_url=" + encodeURIComponent(randomSource) + "&random=" + Math.random(); 
+
+        setInterval(fetchRSS, 300000); // Refresh every 5 minutes (300,000 ms) 
+    </script>
+</body>
+</html> 

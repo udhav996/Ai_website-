@@ -1,0 +1,86 @@
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    
+}
+
+pre{
+
+    font-size: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+h2 {
+    color: #333;
+}
+
+.job {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.job h3 {
+    margin: 0;
+    color: #007bff;
+}
+
+a {
+    text-decoration: none;
+    color: #28a745;
+}
+
+
+
+/* Button styling */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for suggested prompt text */
+#generatedPrompt {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+#home a{
+    
+    background: #45a29e;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 10px;
+    top:-10px;
+    text-decoration: none;
+    align-content: center;
+    
+}
+#home{
+margin-top:10px;
+}
+
+#home a:hover{
+                background-color: #66fcf1;
+}

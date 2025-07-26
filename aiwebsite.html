@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn AI - AI Tools Guide</title>
+    <link rel="stylesheet" href="aiwebsite.css">
+    
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</head>
+<body>
+
+    <header>
+        <nav>
+
+            <div>
+                <img src="logo.png" alt="robot" class="log">
+            </div>
+            <div class="logo">Learn AI</div>
+            <div class="robot-container">
+            <img src="rob.png" alt="robot" class="robot" id="robot" style="max-width: 100px; height: auto;">
+            </div>
+
+                  <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">&#9776;</div>
+
+            <ul>
+                <li><a href="#">
+                    🏠Home</a></li>
+    
+                <!-- AI News with Submenus -->
+                <li class="dropdown">
+                    <a href="file:///C:/aiwebsite/trendingnews.html">📰 AI Latest News </a>
+                    
+                </li>
+    
+                <!-- AI Jobs with Submenus -->
+                <li class="dropdown">
+                    <a href="#">💼 AI Jobs </a>
+                    <ul class="dropdown-menu" >
+                        <li><a href="file:///C:/aiwebsite/ai-jobs.html">AI Job Listings</a></li>
+                        <li><a href="file:///C:/aiwebsite/careerguide.html">Career Guide</a></li>
+                        <li><a href="file:///C:/aiwebsite/ai-resumeandinterviewtips.html">Resume & Interview Tips</a></li>
+                    </ul>
+                </li>
+    
+                <!-- AI Course with Submenus -->
+                <li class="dropdown">
+                    <a href="#">📚 AI Course </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="file:///C:/aiwebsite/basics.html"> Basics of Prompt Engineering</a></li>
+                        <li><a href="file:///C:/aiwebsite/advanced.html">Advanced Prompting</a></li>
+                        <li><a href="file:///C:/aiwebsite/practice.html">Practice & Certification</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="file:///C:/aiwebsite/community.html">
+                    👥 Community</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    
+    
+
+    <section class="hero">
+        <h1>Master Prompt Engineering & Unlock AI’s Full Potential</h1>
+        <p>Learn how to craft powerful AI prompts and take your skills to the next level. 
+            Start your journey today with our expert-led Prompt Engineering Course!</p>
+        <button class="cta-btn"><a href="file:///C:/aiwebsite/basics.html" class="button"> start learning </a> </button>
+    </section>
+
+
+
+    <div class="carousel-container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img src="lwulogo.jpeg" alt="Image 1" >
+              <p class="slide-description">We can make apealing logo with AI by just one prompt.</p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <img src="developer.jpeg" alt="Image 2">
+              <p class="slide-description">Ai can help students and developers to code easier.</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <img src="records.jpeg" alt="Image 3">
+              <p class="slide-description">We can keep our records digital and secure with the help of AI.</p>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <img src="backgroundremove.jpeg" alt="Image 4">
+              <p class="slide-description">AI can help graphic designers who spends lot of time for remove image background.</p>
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <img src="resume.jpg" alt="Image 5">
+              <p class="slide-description">AI can help to screening resumes and it saves lot of time of that company.</p>
+            </div>
+            <!-- Slide 6 -->
+            <div class="swiper-slide">
+              <img src="studywithai.jpeg" alt="Image 6">
+              <p class="slide-description"> AI can help students by making study more easier.</p>
+            </div>
+            <!-- Slide 7 -->
+            <div class="swiper-slide">
+              <img src="krishna.jpeg" alt="Image 7">
+              <p class="slide-description">We can create images using AI by givin just one prompt.</p>
+            </div>
+            <!-- Slide 8 -->
+            <div class="swiper-slide">
+              <img src="dog.jpg" alt="Image 8">
+              <p class="slide-description"> Prompt-: create a dog swimming image .</p>
+            </div>
+            <!-- Slide 9 -->
+            <div class="swiper-slide">
+              <img src="cat.jpg" alt="Image 9">
+              <p class="slide-description">prompt-: cat climbing on tree.</p>
+            </div>
+          </div>
+      
+          <!-- Pagination (Dots) -->
+          <div class="swiper-pagination"></div>
+      
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div> 
+
+
+      <script> 
+
+
+// Swiper for AI Tool Carousel
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// Pause autoplay when hovered
+document.querySelector(".mySwiper").addEventListener("mouseenter", function () {
+  swiper.autoplay.stop();
+});
+
+// Resume autoplay when cursor leaves
+document.querySelector(".mySwiper").addEventListener("mouseleave", function () {
+  swiper.autoplay.start();
+}); 
+
+
+      </script>
+
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search AI tools...">
+    </div>
+    
+<script> 
+// Search Filter
+    document.getElementById("search").addEventListener("input", function () {
+      const searchText = this.value.toLowerCase();
+      document.querySelectorAll(".card").forEach(card => {
+          const toolName = card.querySelector("h2").innerText.toLowerCase();
+          card.style.display = toolName.includes(searchText) ? "block" : "none";
+      });
+    });
+    </script>
+  
+
+    <div class="ai-groups">
+     <div class="category">
+  <h2 onclick="toggleCategory('chatbots')">💬 AI Chatbots & Assistants ⬇</h2>
+  <div id="chatbots" class="category-content">
+    <p>Best AI tools for conversations, writing, and research.</p>
+
+    <div class="card-container" id="chatbots-container">
+      <!-- Cards will be inserted here -->
+    </div>
+
+     <table align="center">
+                    <tr>
+                        <th>AI Tool</th>
+                        <th>Plans</th>
+                        <th>Features</th>
+                    </tr>
+                    <tr>
+                        <td>ChatGPT</td>
+                        <td>✅ Free & Paid</td>
+                        <td>Best for writing, coding, and general chat</td>
+                    </tr>
+                    <tr>
+                        <td>Google Bard</td>
+                        <td>✅ Free</td>
+                        <td>Strong for real-time research & information</td>
+                    </tr>
+                    <tr>
+                        <td>Jasper AI</td>
+                        <td>❌ Paid Only</td>
+                        <td>Best for marketing & creative content</td>
+                    </tr>
+                    <tr>
+                        <td>Perplexity AI</td>
+                        <td>✅ Free</td>
+                        <td>Great for AI-powered research</td>
+                    </tr>
+                </table>
+
+  </div>
+</div>
+
+      
+      <div class="category">
+  <h2 onclick="toggleCategory('imageAI')">🎨 AI Image & Art Generators ⬇</h2>
+  <div id="imageAI" class="category-content">
+    <p>Best AI tools for generating digital art and AI images.</p>
+    <div class="card-container" id="imageAI-container"></div>
+    <table align="center">
+          <tr>
+              <th>AI Tool</th>
+              <th>Plans</th>
+              <th>Features</th>
+          </tr>
+          <tr>
+              <td>DALL·E</td>
+              <td>❌ Paid Only</td>
+              <td>Creates realistic AI images from text</td>
+          </tr>
+          <tr>
+              <td>MidJourney</td>
+              <td>❌ Paid Only</td>
+              <td>High-quality AI-generated digital art</td>
+          </tr>
+          <tr>
+              <td>Stable Diffusion</td>
+              <td>✅ Free & Paid</td>
+              <td>Open-source AI image generation</td>
+          </tr>
+          <tr>
+              <td>leonardo ai</td>
+              <td>✅ Free</td>
+              <td>AI-powered dream-like visual effects</td>
+          </tr>
+      </table>
+
+  </div>
+</div>
+
+
+
+  
+      <div class="category">
+  <h2 onclick="toggleCategory('codingAI')">💻 AI Coding Assistants ⬇</h2>
+  <div id="codingAI" class="category-content">
+    <p>Best AI tools for assisting programmers in writing and improving code.</p>
+    <div class="card-container" id="codingAI-container"></div>
+   <table align="center">
+          <tr>
+              <th>AI Tool</th>
+              <th>Plans</th>
+              <th>Features</th>
+          </tr>
+          <tr>
+              <td>GitHub Copilot</td>
+              <td>❌ Paid Only</td>
+              <td>AI-powered code suggestions in real-time</td>
+          </tr>
+          <tr>
+              <td>Tabnine</td>
+              <td>✅ Free & Paid</td>
+              <td>AI autocomplete for multiple programming languages</td>
+          </tr>
+          <tr>
+              <td>Codeium</td>
+              <td>✅ Free</td>
+              <td>AI-driven code completion with intelligent suggestions</td>
+          </tr>
+          <tr>
+              <td>Amazon CodeWhisperer</td>
+              <td>✅ Free & Paid</td>
+              <td>AI-powered coding assistant integrated with AWS</td>
+          </tr>
+      </table>
+  </div>
+</div>
+
+
+      <div class="category">
+  <h2 onclick="toggleCategory('voiceAI')">🎙 AI Voice & Speech Tools ⬇</h2>
+  <div id="voiceAI" class="category-content">
+    <p>Best AI tools for generating realistic voices, text-to-speech, and voice cloning.</p>
+    <div class="card-container" id="voiceAI-container"></div>
+    
+<table align="center">
+          <tr>
+              <th>AI Tool</th>
+              <th>Plans</th>
+              <th>Features</th>
+          </tr>
+          <tr>
+              <td>Murf AI</td>
+              <td>✅ Free & Paid</td>
+              <td>Realistic AI-generated voices for presentations & videos</td>
+          </tr>
+          <tr>
+              <td>ElevenLabs</td>
+              <td>❌ Paid Only</td>
+              <td>Ultra-realistic voice cloning with natural emotions</td>
+          </tr>
+          <tr>
+              <td>Play.ht</td>
+              <td>✅ Free & Paid</td>
+              <td>High-quality AI text-to-speech generation</td>
+          </tr>
+          <tr>
+              <td>Resemble AI</td>
+              <td>✅ Free & Paid</td>
+              <td>AI-powered voice cloning with customization options</td>
+          </tr>
+      </table>
+  </div>
+</div>
+
+
+
+      <div class="category">
+  <h2 onclick="toggleCategory('businessAI')">📈 AI Business & Marketing Tools ⬇</h2>
+  <div id="businessAI" class="category-content">
+    <p>Best AI tools for marketing, content creation, and business automation.</p>
+    <div class="card-container" id="businessAI-container"></div>
+   <table align="center">
+          <tr>
+              <th>AI Tool</th>
+              <th>Plans</th>
+              <th>Features</th>
+          </tr>
+          <tr>
+              <td>Copy.ai</td>
+              <td>✅ Free & Paid</td>
+              <td>AI-powered marketing copy and blog writing</td>
+          </tr>
+          <tr>
+              <td>Canva AI</td>
+              <td>✅ Free & Paid</td>
+              <td>AI-powered graphic design and social media templates</td>
+          </tr>
+          <tr>
+              <td>Synthesia</td>
+              <td>❌ Paid Only</td>
+              <td>AI-generated video creation with human-like avatars</td>
+          </tr>
+          <tr>
+              <td>Runway ML</td>
+              <td>✅ Free & Paid</td>
+              <td>AI-powered video editing and content generation</td>
+          </tr>
+      </table>
+  </div>
+</div>
+
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <a id="modal-link" href="#" target="_blank">Try Now</a>
+        </div>
+    </div>  
+    
+
+
+   
+
+
+    <style>
+        /* Floating Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            color: white;
+            font-size: 18px;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            animation: bounce 2s infinite;
+        }
+
+        /* Chat Icon */
+        .chat-button i {
+            font-size: 22px;
+        }
+
+        /* Hover Effect */
+        .chat-button:hover {
+            background: linear-gradient(135deg, #0056b3, #0097e6);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+        /* Bounce Animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+    
+    
+
+    <!-- Floating Chat Button -->
+    <button class="chat-button" onclick="window.open('https://chat.openai.com/', '_blank')">
+        <i class="fas fa-comments"></i> <img src="chat-gpt.png" width="20px" height="20"/> Chat with AI
+    </button>
+
+
+    <!-- Footer -->
+<footer class="footer bg-light text-center p-4">
+  <p class="mb-0">&copy; 2025 LearnAI. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script defer src="aiwebsite.js"></script>
+
+
+<script>
+  function toggleCategory(id) {
+    const content = document.getElementById(id);
+    content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+  }
+
+  // Hide all .category-content on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.category-content').forEach(section => {
+      section.style.display = 'none';
+    });
+  });
+</script>
+
+
+<script>
+  const robot = document.getElementById("robot");
+
+  // For mobile tap shake
+  function handleMobileShake() {
+    if (window.innerWidth <= 768) {
+      robot.classList.remove("shake-mobile"); // reset
+      void robot.offsetWidth; // trigger reflow
+      robot.classList.add("shake-mobile");
+    }
+  }
+
+  // Attach tap (click) handler only for mobile
+  if (window.innerWidth <= 768 && robot) {
+    robot.addEventListener("click", handleMobileShake);
+  }
+</script>
+
+</body>
+</html> 
